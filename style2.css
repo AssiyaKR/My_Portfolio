@@ -1,0 +1,160 @@
+/* Importer une belle police */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap');
+
+/* Global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #09203F, #537895); /* Dégradé bleu moderne */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Conteneur principal */
+.container {
+    width: 420px;
+    height: 330px;
+    background: rgba(255, 255, 255, 0.15); /* Fond semi-transparent */
+    backdrop-filter: blur(10px); /* Effet verre dépoli */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Titre */
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Pacifico', cursive; /* Police manuscrite élégante */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajout d’un emoji au titre */
+.title::before {
+    content: "⏳ ";
+}
+
+.title::after {
+    content: " ";
+}
+
+/* Affichage du timer */
+.timer {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+
+/* Conteneur des boutons */
+.button-wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+/* Boutons stylisés */
+button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-transform: uppercase;
+}
+
+/* Bouton Start */
+#start {
+    background: #09203F;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+#start:hover {
+    background: #219150;
+}
+
+#start::before {
+    content: "▶️";
+}
+
+/* Bouton Stop */
+#stop {
+    background: #000000;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+#stop:hover {
+    background: #ffffff;
+}
+
+#stop::before {
+    content: "⏸️";
+}
+
+/* Bouton Reset */
+#reset {
+    background: #537895;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+#reset:hover {
+    background: #c0392b;
+}
+
+#reset::before {
+    content: "🔄";
+}
+#motivation {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff; /* Or doré */
+    background: linear-gradient(90deg, #537895, #09203F, #537895);
+    background-size: 200% auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    animation: glowing 3s infinite linear alternate;
+    margin-top: 15px;
+}
+
+/* Animation du fond */
+@keyframes glowing {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+
+
+.logo-container {
+    position: fixed; /* Keeps the logo fixed at the top-left corner */
+    top: 10px;  /* Adjust distance from top */
+    left: 10px; /* Adjust distance from left */
+    z-index: 1000; /* Ensure it stays above other elements */
+    padding: 5px; /* Optional: space around the logo */
+}
+
+.logo-container img {
+    width: 100px; /* Adjust logo size */
+    height: auto;
+}
