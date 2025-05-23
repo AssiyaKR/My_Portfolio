@@ -47,7 +47,7 @@ fun CarteSimple() {
         // Partie haute : photo, nom et titre
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Image(
-                painter = painterResource(id = R.drawable.meevent7),
+                painter = painterResource(id = R.drawable.myimg),
                 contentDescription = "Photo de profil",
                 modifier = Modifier
                     .size(120.dp) // Légèrement plus grande
